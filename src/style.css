@@ -1,38 +1,184 @@
-:root {
-  --main-dark-bg-color: #002e39;
-  --main-light-bg-color: #0f3942;
-  --text-general-color: #f2f6f7;
-  --button-text-color: #ffffff;
-  --button-border-color: #2e6370;
-  --button-hover-color: #004353;
-  --general-bg-color: #002125;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* ------- General -------- */
+
+* {
+  font-family: 'Montserrat', sans-serif!important;
 }
 
-.header-layout-container {
-  grid-area: header;
+p {
+  font-size:12px;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-p {
+  padding: 50px 0px;
+}
+
+.container-pb {
+  padding-bottom: 50px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.column {
+  padding: 20px;
+}
+
+.ant-list-items {
+  font-size:12px;
+}
+
+.ant-btn {
+  border-radius: 5px;
+  border:none;
+  font-weight: 600;
+}
+
+.line {
+  border-top: 1px solid #DB0600;
+  height: 4px;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 20px auto 0 auto;
+}
+
+
+/* Color letras */
+
+.red-color {
+  color:#DB0600;
+} 
+
+.black-color {
+  color:#000000;
+}
+
+.green-color {
+  color:#247f62;
+} 
+
+.rose-color {
+  color:#c997a8;
+}
+
+.grey-color {
+  color:#3F3F3F;
+}
+
+.white-color {
+  color:#ffffff;
+}
+
+
+/* Color fondo */
+
+.background-red {
+  background-color:#DB0600;
+}
+
+.background-black {
+  background-color:#000000;
+}
+
+.background-grey {
+  background-color:#3F3F3F;
+}
+
+
+/* Botones */
+
+.rose-button {
+  background:#c997a8; 
+  color:#ffffff;
+  position: absolute;
+  margin: 5px 0px 0px 10px;
+}
+
+.rose-button:hover {
+  background:#ffffff; 
+  color: #c997a8!important;
+}
+
+.green-button {
+  background:#247f62; 
+  color:#ffffff;
+  position: absolute;
+  margin: 5px 0px 0px 10px;
+}
+
+.green-button:hover  {
+  background:#ffffff; 
+  color:#247f62!important;
+}
+
+
+.black-button  {
+  background:#000000; 
+  color:#ffffff!important;
+}
+
+.black-button:hover  {
+  background:#ffffff; 
+  color:#000000!important;
+}
+
+.red-button  {
+  background:#DB0600; 
+  color:#ffffff!important;
+}
+
+.red-button:hover  {
+  background:#ffffff; 
+  color:#DB0600!important;
+}
+
+
+
+/* ------- Responsive -------- */
+
+@media (max-width: 720px) { 
+
+.rose-bottom {
+  position: relative;
+}
+    
+.green-bottom {
+  position: relative;
+}
+
+.esmaltes-banner {
+  padding-left: 0px;
+  margin: auto;
 }
 
 .home-page-container {
-  grid-area: main-content;
+  margin-top:120px;
 }
 
-.error-404-page-container {
-  grid-area: main-content;
+.container {
+
+padding: 20px;
 }
 
-.footer-layout-container {
-  grid-area: footer;
+
+[class^="ant-row"] [class^="ant-row"] {
+
+display: block;
+
 }
 
-.app-container {
-  display: grid;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  grid-template-areas:
-    "header"
-    "main-content"
-    "footer";
-  grid-template-rows: 4rem 96% 5rem;
-  grid-template-columns: 100%;
 }

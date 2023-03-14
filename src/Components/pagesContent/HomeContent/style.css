@@ -1,0 +1,136 @@
+/* Slider */
+
+.slider {
+    background: #DB0600;
+    height: 500px ;
+    width: 100%;
+    text-align: center;
+  }
+  
+.tabs {
+    height: 500px ;  
+  }
+  
+.tabs h1 {
+    bottom: 20px;
+    position:relative;
+    padding: 12px;
+  }
+  
+.slider01 {
+    background-image: url("/src/assets/images/Banner_01.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  
+.slider02 {
+    background-image: url("/src/assets/images/Banner_02.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  
+.tabs.slider01 h1{
+    background:#ffe6ea;
+  }
+  
+.tabs.slider02 h1{
+    background:#41cfa4;
+  }
+  
+.esmaltes-banner {
+    max-width: 200px;
+    padding-left: 10%;
+  }
+  
+  
+/* ------- Banner nosotros -------- */
+.banner-nosotros{
+    background-image: url("/src/assets/images/nosotros.jpg");
+    padding: 75px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+.logo-banner {
+    max-width: 250px;
+  }
+  
+  /* ------- Productos -------- */
+  
+  /* Cards */
+  
+.ant-card-bordered {
+    border:none;
+  }
+  
+  /* ------- Categorias Home -------- */
+  
+  /* Box */ 
+  
+.box {
+    background:#002125;
+    height: 300px;
+    text-align: center;
+    margin: 5px;
+    display:flex;
+    align-items: center;
+    width: 97%;
+    color:#ffffff;
+  }
+  
+.contenido-box {
+    width: 100%;
+    padding: 10px;
+  }
+  
+.categoria-01 {
+    background-image:url("/src/assets/images/canni_01.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.categoria-02 {
+    background-image:url("/src/assets/images/canni_02.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.categoria-03 {
+    background-image:url("/src/assets/images/canni_03.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.categoria-04 {
+    background-image:url("/src/assets/images/canni_04.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.categoria-05 {
+    background-image:url("/src/assets/images/canni_05.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.categoria-06 {
+    background-image:url("/src/assets/images/canni_06.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+img.logo-partners {
+    max-width: 80%;
+  }
+
+.ant-card .ant-card-cover >* {
+  display: inline-block;  
+}
