@@ -1,0 +1,37 @@
+/* ------- Header -------- */
+
+.top-bar  {
+    padding:8px 0px 8px 0px;
+    text-align: center;
+  }
+  
+.top-bar p {
+    margin:0px;
+  }
+  
+.anticon-heart, .anticon-caret-right {
+    color:#DB0600;
+    padding-right:3px;
+  }
+  
+.menu {
+    padding: 15px;
+  }
+  
+.logo {
+    max-width: 130px;
+  }
+  
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu {
+    padding-inline: 5px;
+  }
+  
+.ant-menu-horizontal {
+    border:none;
+  }
+  
+.info-header {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #D8D8D8;
+  }

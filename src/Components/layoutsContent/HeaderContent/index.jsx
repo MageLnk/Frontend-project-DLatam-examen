@@ -1,8 +1,18 @@
-// Style
-import "./style.css";
+import Topbar from './Topbar'
+import Navbar from './Navbar';
+import Info from './Info';
+
 // App
 const HeaderContent = () => {
-  return <div className="header-content-container">Header o k ase</div>;
-};
+  return (
+      <div class="header">
+        <Topbar/>
+        <Navbar/>
+        <Info/>
+      </div>
+    )
+  };
 
 export default HeaderContent;
+
+
