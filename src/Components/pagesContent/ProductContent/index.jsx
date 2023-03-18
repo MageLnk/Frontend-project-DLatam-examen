@@ -5,17 +5,19 @@ import "./style.css";
 import MockupContext from "../../../Context/MockupContext";
 
 const ProductContent = () => {
-  const { products } = useContext(MockupContext);
+  const { products, cart, setCart } = useContext(MockupContext);
   const params = useParams();
 
-  const aleluya = (array) => {
-    return array.filter((result) => result.id === params.id);
+ // Productos
+
+  const filterProducts = (arrayOfProducts) => {
+    return arrayOfProducts.filter((result) => result.id === params.id);
   };
 
   return (
     <div>
       {products &&
-        aleluya(products).map((product) => {
+        filterProducts(products).map((product) => {
           return (
             <>
               <Row className="container container-p">

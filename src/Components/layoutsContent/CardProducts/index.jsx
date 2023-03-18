@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card, Button } from "antd";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 // Context
 import MockupContext from "../../../Context/MockupContext";
@@ -16,6 +18,9 @@ const CardProducts = () => {
               <Card hoverable cover={<img alt={product.alt} src={product.img} />} key={product.id}>
                 <h3>{product.name}</h3>
                 <h4 className="red-color price">{product.price}</h4>
+                <Link to={`/product/${product.id}`}>
+                  <Button className="black-red-button">Seleccionar opciones</Button>
+                </Link>
               </Card>
             </Col>
           );

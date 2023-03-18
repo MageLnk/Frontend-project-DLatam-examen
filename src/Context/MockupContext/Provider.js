@@ -43,36 +43,17 @@ const MockupContextProvider = ({ children }) => {
       desc: "Prueba 04",
     },
   ]);
-  /*   // Prueba 
 
 
-  useEffect(() => {
-    const fecthProductos = async () => {
-        const resp = await fetch('../../Mockup/index.json') ;
-        const data= await resp.json();
-        console.log(data)
-        setProductos(data);
-    };
+  const [cart, SetCart] = useState([]);
 
-    fecthProductos();
-}, [] );
- */
 
-  //const [data, setData] = useState("");
-  //const exampleUseApiCall = async (userId) => {
-  //  try {
-  //    const data = await apiCall({ url: `http://insertApiAddress` });
-  //    // Insert setData(data)
-  //  } catch (e) {
-  //    alert("Un error ha ocurrido. Por favor actualice la página");
-  //  }
-  //};
 
   useEffect(() => {
     // Acá deberías hacer el set state de products
   }, []);
 
-  return <MockupContext.Provider value={{ products }}>{children}</MockupContext.Provider>;
+  return <MockupContext.Provider value={{ products, cart, SetCart }}>{children}</MockupContext.Provider>;
 };
 
 export default MockupContextProvider;

@@ -31,7 +31,7 @@ const FooterContent = () => {
   <div className="footer white-color background-grey">
     <Row className="container">
       <Col sm={24} md={12} lg={6} className="column">
-        <img src={logoBlanco} class="logo"/>
+        <img src={logoBlanco} className="logo"/>
         <h4>Ubicación</h4>
         <p>Santiago Centro – Direccion de Bodega para Retiros será enviada por Whatsapp una vez realizada la compra.</p>
       </Col>
