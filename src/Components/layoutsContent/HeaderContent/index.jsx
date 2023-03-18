@@ -5,7 +5,7 @@ import Info from './Info';
 // App
 const HeaderContent = () => {
   return (
-      <div class="header">
+      <div className="header">
         <Topbar/>
         <Navbar/>
         <Info/>

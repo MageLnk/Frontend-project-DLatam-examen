@@ -5,11 +5,11 @@ import Cart from "./Pages/Cart";
 import ProductCategory from "./Pages/ProductCategory";
 import Product from "./Pages/Product";
 import Login from "./Pages/Login";
+import Checkout from "./Pages/Checkout";
 // Layouts
 import { Header, Footer } from "./Layouts/";
 // Style
 import "./style.css";
-import Checkout from "./Pages/Checkout";
 
 // App
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product-category" element={<ProductCategory />} />
+          <Route path="/product-category/:category" element={<ProductCategory />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />

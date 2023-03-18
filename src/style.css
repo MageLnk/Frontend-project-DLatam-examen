@@ -146,7 +146,15 @@ h4 {
   color:#DB0600!important;
 }
 
+.black-red-button  {
+  background:#000000; 
+  color:#ffffff!important;
+}
 
+.black-red-button:hover  {
+  background:#DB0600; 
+  color:#ffffff!important;
+}
 
 /* ------- Responsive -------- */
 
