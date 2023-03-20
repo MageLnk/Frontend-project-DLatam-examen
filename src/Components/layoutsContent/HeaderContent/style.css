@@ -1,5 +1,9 @@
 /* ------- Header -------- */
 
+.ant-menu-item-active{
+  border:none!important;
+}
+
 .top-bar  {
     padding:8px 0px 8px 0px;
     text-align: center;
@@ -17,14 +21,18 @@
 .menu {
     padding: 15px;
   }
+
+
   
 .logo {
     max-width: 130px;
   }
   
-.ant-menu-light.ant-menu-horizontal >.ant-menu-item, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu {
-    padding-inline: 5px;
-  }
+
+.menu_principal {
+    text-align: right;
+}
+
   
 .ant-menu-horizontal {
     border:none;
@@ -34,4 +42,8 @@
     text-align: center;
     padding: 10px;
     border-top: 1px solid #D8D8D8;
+  }
+
+.ant-menu-overflow {
+    display: block;
   }

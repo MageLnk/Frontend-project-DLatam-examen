@@ -156,6 +156,45 @@ h4 {
   color:#ffffff!important;
 }
 
+/* ------- Forms -------- */
+
+form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+input {
+  height: 30px;
+  border:#eeeeeeb7;
+  border-radius: 5px;
+
+}
+
+label {
+  padding: 0px 0px 15px 0px;
+}
+
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.box-form {
+
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 20px;
+
+  margin: 2%;
+
+}
+
+
 /* ------- Responsive -------- */
 
 @media (max-width: 720px) { 
@@ -190,3 +229,4 @@ display: block;
 }
 
 }
+
