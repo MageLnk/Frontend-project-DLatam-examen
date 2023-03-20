@@ -53,7 +53,7 @@ const MockupContextProvider = ({ children }) => {
     // Acá deberías hacer el set state de products
   }, []);
 
-  return <MockupContext.Provider value={{ products, cart, SetCart }}>{children}</MockupContext.Provider>;
+  return <MockupContext.Provider value={{ products, cart, SetCart }}>{children}</MockupContext.Provider >;
 };
 
 export default MockupContextProvider;
