@@ -5,43 +5,36 @@ import GeneralContext from ".";
 import apiCall from "../../utilities/api/apiCall";
 
 const GeneralContextProvider = ({ children }) => {
-
   const [products, setProducts] = useState("");
 
-
   const getAllData = async (userId) => {
+    try {
+      const data = await apiCall({
+        url: `https://project-castle-production.up.railway.app/products/temporal`,
+      });
 
-   try {
-     const data = await apiCall({ 
-      url: `https://project-castle-production.up.railway.app/products/temporal`,
-    });
+      //console.log(data)
 
-    //console.log(data)
-
-    if (data)setProducts(data)
-
-
-   } catch (e) {
-     alert("Un error ha ocurrido. Por favor actualice la página");
-   }
-
+      if (data) setProducts(data);
+    } catch (e) {
+      alert("Un error ha ocurrido. Por favor actualice la página");
+    }
   };
 
   useEffect(() => {
-
-    getAllData()
-    
+    getAllData();
   }, []);
 
   return (
-   <GeneralContext.Provider 
-    value={{ 
-    products,
-    getAllData 
-  }}
-  >
-  {children}
-  </GeneralContext.Provider >
+    <GeneralContext.Provider
+      value={{
+        products,
+        getAllData,
+        olakase: "ola",
+      }}
+    >
+      {children}
+    </GeneralContext.Provider>
   );
 };
 
