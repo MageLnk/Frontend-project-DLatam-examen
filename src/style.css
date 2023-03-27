@@ -7,6 +7,11 @@
   font-family: 'Montserrat', sans-serif!important;
 }
 
+
+a:where(.css-dev-only-do-not-override-10ed4xt).ant-typography {
+  color:#ffffff;
+}
+
 p {
   font-size:12px;
 }
@@ -14,6 +19,12 @@ p {
 h4 {
   font-weight: 500;
 }
+
+
+img {
+  width:100%;
+}
+
 
 .container {
   max-width: 1080px;
@@ -27,6 +38,14 @@ h4 {
 
 .container-pb {
   padding-bottom: 50px;
+}
+
+.padding-top {
+  padding-top: 25px;
+}
+
+.padding-rigth {
+  padding-right: 25px;
 }
 
 .text-center{
@@ -55,6 +74,15 @@ h4 {
   padding: 10px 0px;
   margin: 20px auto 0 auto;
 }
+
+.gray-line {
+  border-top: 1px solid #E5E5E5;
+  height: 4px;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 20px auto 0 auto;
+}
+
 
 
 /* Color letras */
@@ -165,7 +193,7 @@ form {
 }
 
 input {
-  height: 30px;
+  height: 40px;
   border:#eeeeeeb7;
   border-radius: 5px;
 

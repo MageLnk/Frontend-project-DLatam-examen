@@ -2,9 +2,7 @@ import { CheckoutContent } from "../../Components/pagesContent";
 // App
 const Checkout = () => {
   return (
-      <>
         <CheckoutContent/>
-      </>  
   );
 };
 

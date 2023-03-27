@@ -1,75 +1,125 @@
-import { useState } from "react";
-import {Row, Col, Card} from 'antd';
+// Context 
+
+import GeneralContext from "../../../Context/GeneralContext";
+import { useContext } from "react";
+
+// Components 
+
+import {Row, Col, Button} from 'antd';
+import { Link } from "react-router-dom";
 
 
 const CheckoutContent = () => {
 
-
-    const [products, setProducts] = useState([
-        {
-            "id":"01",
-            "name":"White & Gray & Black – Gel Polish 7.3ml",
-            "img":"https://canni.cl/wp-content/uploads/2022/11/blanco-300x300.webp",
-            "alt": "Esmalte 01",
-            "price":"6800",
-            "category": "Esmalte",
-            "desc": "Prueba 01"
-        },
-        {
-            "id":"02",
-            "name":"Rose Red – Gel Polish 7.3ml",
-            "img":"https://canni.cl/wp-content/uploads/2022/11/rose-300x300.webp",
-            "alt": "Esmalte 02",
-            "price":"6500",
-            "category": "Esmalte",
-            "desc": "Prueba 02"
-        },
-        {
-            "id":"03",
-            "name":"Gold & Yellow – Gel Polish 7.3ml",
-            "img":"https://canni.cl/wp-content/uploads/2022/11/oro_amarillo-300x300.webp",
-            "alt": "Esmalte 03",
-            "price":"6800",
-            "category": "Esmalte",
-            "desc": "Prueba 03"
-        },
-        {
-            "id":"04",
-            "name":"Red – Gel Polish 7.3ml",
-            "img":"https://canni.cl/wp-content/uploads/2022/11/rojo-300x300.webp",
-            "alt": "Esmalte 04",
-            "price":"6500",
-            "category": "Esmalte",
-            "desc": "Prueba 04"
-        }
-        
-    ])
-
-    return (
-        <div className="container container-p text-center">
-
-        <h1>Esmaltes</h1>
-        <div className="line"></div> 
-            <Row gutter={16}> 
-            {products.map((product) => {
-                
-              return (   
-              <Col xs={12} lg={6}>   
-                <Card
-                hoverable
-                cover={<img alt={product.alt} src={product.img} />}
-                key={product.id}
-                >
-                <h3>{product.name}</h3> 
-                <h4 className="red-color price">{product.price}</h4>
-                </Card>
-            </Col> )      
-            })}
-            </Row>
-        </div>
-        )
+    const { cart } = useContext(GeneralContext);
+    const totalPrice = cart.reduce((acc, product) => acc + (product.quantity * product.price), 0);
     
+    return (
+            <div className="container container-p">
+                <div className="text-center">
+                    <h1>Finalizar compra</h1>
+                    <div className="line"></div> 
+                </div>           
+                    <Row>
+                        <Col lg={14}>
+                            <div> 
+                                <form className="checkout-form padding-rigth">
+                                    <h2>Detalles de facturación</h2>
+                                    <div className="gray-line"></div>
+                                    <Row>
+                                        <Col lg={12} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Nombre:</label></b></p>
+                                            <input className="input-checkout"
+                                        />
+                                        </Col>
+                                        <Col lg={12} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Apellido:</label></b></p>
+                                            <input className="input-checkout"
+                                        />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col lg={12} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Email:</label></b></p>
+                                            <input className="input-checkout"
+                                        />
+                                        </Col>
+                                        <Col lg={12} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Teléfono:</label></b></p>
+                                            <input className="input-checkout"
+                                        />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col lg={24} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Dirección de la calle:</label></b></p>
+                                            <input className="input-checkout-v2"
+                                        />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col lg={24} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Región:</label></b></p>
+                                            <input className="input-checkout-v2"
+                                        />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col lg={24} className="checkout-form">
+                                            <p><b><label htmlFor='name'>Comuna:</label></b></p>
+                                            <input className="input-checkout-v2"
+                                        />
+                                        </Col>
+                                    </Row>
+                                    <h2 className="padding-top">Información adicional</h2>
+                                    <div className="gray-line"></div>
+
+                                        <Row>
+                                            <Col lg={24}>
+                                                <p><b><label htmlFor='name'>Notas del pedido (opcional)</label></b></p>
+                                                <textarea></textarea>
+                                            </Col>
+                                        </Row>
+
+                                </form>
+                            </div>   
+                        </Col>
+
+                        <Col lg={10}>
+                            <table className="cart-table">
+                                    <thead className="cart-head">
+                                        <tr>
+                                            <th className="total-product">Nombre</th>
+                                            <th className="total-price">Subtotal</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    {cart.map((product, index) => (
+                                    <tbody key={product.id}>
+                                        <tr>
+                                            <td className="total">{product.name_product}</td>
+                                            <td className="total">{product.quantity * product.price}</td>
+                                        </tr>   
+                                    </tbody>         
+                                    ))}
+                                    <tr>
+                                            <td className="total"><h3>Total:</h3></td>
+                                            <td className="total red-color"><h3>{totalPrice}</h3></td>
+                                        </tr>  
+                            </table> 
+
+                            <div className="checkout-message">  
+                                    <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web y otros propósitos descritos en nuestra política de privacidad.</p>
+                                    <Link to={`#`}><Button className="black-red-button button-cart">Realizar pedido</Button></Link>
+                            </div>   
+                        </Col>
+                    </Row>
+            </div>
+    )
     
     }
     
 export default CheckoutContent;
+
+

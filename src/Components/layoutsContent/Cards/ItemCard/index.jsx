@@ -1,7 +1,13 @@
+// Context
+
 import GeneralContext from "../../../../Context/GeneralContext";
+import { useContext } from "react";
+
+// Components
+
 import { Row, Col, Card } from "antd";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+
 
 const ItemCards = () => {
   const { products } = useContext(GeneralContext);

@@ -1,11 +1,11 @@
-import {InstagramFilled, PhoneFilled   } from '@ant-design/icons';
+import {InstagramFilled, PhoneFilled} from '@ant-design/icons';
 import {Row, Col, Card} from 'antd';
 const { Meta } = Card;
 
 const Partners = () => {
 
 return (
-        <>
+       
         <Row>
           <div className="container text-center container-pb">
             <h2>NUESTROS PARTNERS</h2>
@@ -50,7 +50,6 @@ return (
                 </Row>
             </div>
         </Row> 
-      </>
 )
 }
 export default Partners;

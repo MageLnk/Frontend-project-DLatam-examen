@@ -6,6 +6,9 @@ import apiCall from "../../utilities/api/apiCall";
 
 const GeneralContextProvider = ({ children }) => {
   const [products, setProducts] = useState("");
+  const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+
 
   const getAllData = async (userId) => {
     try {
@@ -30,7 +33,11 @@ const GeneralContextProvider = ({ children }) => {
       value={{
         products,
         getAllData,
-        olakase: "ola",
+        cart,
+        setCart,
+        quantity,
+        setQuantity
+
       }}
     >
       {children}

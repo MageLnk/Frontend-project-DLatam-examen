@@ -1,4 +1,5 @@
 import {Row, Col, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const Categorias = () => {
 
@@ -13,7 +14,9 @@ return (
                 <div className="box categoria-01">
                     <div className="contenido-box">
                         <h2>ESMALTES</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/esmalte">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>
                     </div> 
                 </div>
             </Col>
@@ -21,7 +24,9 @@ return (
                 <div className="box categoria-02">
                     <div className="contenido-box">
                         <h2>PAINTING GEL</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/painting-gel">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>    
                     </div> 
                 </div>
             </Col>
@@ -29,7 +34,9 @@ return (
                 <div className="box categoria-03">
                     <div className="contenido-box">
                         <h2>HERRAMIENTAS Y ACCESORIOS</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/herramientas-y-accesorios">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>
                     </div> 
                 </div>
             </Col>
@@ -39,7 +46,9 @@ return (
                 <div className="box categoria-04">
                     <div className="contenido-box">
                         <h2>NAILS EXTENSION</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/nail-extension">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>
                     </div> 
                 </div>
             </Col>
@@ -47,7 +56,9 @@ return (
                 <div className="box categoria-05">
                     <div className="contenido-box ">
                         <h2>ACEITE Y SUAVIZANTE</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/aceite-y-suavizante">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>
                     </div> 
                 </div>
             </Col>
@@ -55,7 +66,9 @@ return (
                 <div className="box categoria-06">
                     <div className="contenido-box">
                         <h2>EFECTOS Y COLLECIONES</h2>
-                        <Button className="black-button">Ver más</Button>
+                        <Link to="/product-category/efectos-y-colecciones">
+                            <Button className="black-button">Ver más</Button>
+                        </Link>
                     </div> 
                 </div>
             </Col>

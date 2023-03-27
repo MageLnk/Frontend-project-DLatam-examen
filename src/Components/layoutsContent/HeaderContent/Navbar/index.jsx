@@ -1,8 +1,14 @@
-import '../../HeaderContent/style.css'
+// Components
+
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Row, Col, Menu } from 'antd';
 import logo from '../../../../assets/images/Logo_Canni.webp';
 import { UserOutlined, ShoppingCartOutlined, MenuOutlined, UsergroupAddOutlined } from '@ant-design/icons';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+
+// Style
+
+import '../../HeaderContent/style.css'
+
 
 const Navbar = () => {
 
@@ -33,12 +39,12 @@ const Navbar = () => {
                             { label:"Carrito", key:"cart", icon:<ShoppingCartOutlined />},
                             { label:"Menu", key:"category", icon:<MenuOutlined />,
                             children:[ 
-                                {label: "Esmaltes", key:"/product-category/esmaltes"},
-                                {label: "Painting gel", key:"/product-category/painting gel"},
-                                {label: "Herramientas y accesorios", key:"/product-category/herramientas y accesorios"},
-                                {label: "Nail Extension", key:"/product-category/nail extension"},
-                                {label: "Aceite y suavizante", key:"/product-category/aceite y suavizante"},
-                                {label: "Efectos y colecciones", key:"/product-category/efectos y colecciones"},
+                                {label: "Esmalte", key:"/product-category/esmalte".replace(/ /g, "-")},
+                                {label: "Painting gel", key:"/product-category/painting gel".replace(/ /g, "-")},
+                                {label: "Herramientas y accesorios", key:"/product-category/herramientas y accesorios".replace(/ /g, "-")},
+                                {label: "Nail Extension", key:"/product-category/nail extension".replace(/ /g, "-")},
+                                {label: "Aceite y suavizante", key:"/product-category/aceite y suavizante".replace(/ /g, "-")},
+                                {label: "Efectos y colecciones", key:"/product-category/efectos y colecciones".replace(/ /g, "-")},
                             ]}
                             ,
                             ]}
@@ -69,12 +75,12 @@ const Navbar = () => {
                             { label:"Carrito", key:"cart", icon:<ShoppingCartOutlined />},
                             { label:"Menu", key:"category", icon:<MenuOutlined />,
                             children:[ 
-                                {label: "Esmalte", key:"/product-category/esmaltes"},
-                                {label: "Painting gel", key:"/product-category/painting gel"},
-                                {label: "Herramientas y accesorios", key:"/product-category/herramientas y accesorios"},
-                                {label: "Nail Extension", key:"/product-category/nail extension"},
-                                {label: "Aceite y suavizante", key:"/product-category/aceite y suavizante"},
-                                {label: "Efectos y colecciones", key:"/product-category/efectos y colecciones"},
+                                {label: "Esmalte", key:"/product-category/esmalte".replace(/ /g, "-")},
+                                {label: "Painting gel", key:"/product-category/painting gel".replace(/ /g, "-")},
+                                {label: "Herramientas y accesorios", key:"/product-category/herramientas y accesorios".replace(/ /g, "-")},
+                                {label: "Nail Extension", key:"/product-category/nail extension".replace(/ /g, "-")},
+                                {label: "Aceite y suavizante", key:"/product-category/aceite y suavizante".replace(/ /g, "-")},
+                                {label: "Efectos y colecciones", key:"/product-category/efectos y colecciones".replace(/ /g, "-")},
                             ]}
                             ,
                             ]}

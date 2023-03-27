@@ -1,6 +1,8 @@
+// Components
+
 import ItemCards from "./ItemCard";
 
-// style 
+// Style 
 
 import "./style.css";
 
