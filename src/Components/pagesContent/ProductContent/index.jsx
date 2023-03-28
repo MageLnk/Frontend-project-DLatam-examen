@@ -39,7 +39,7 @@ const ProductContent = () => {
     deployFilteredData.map(({ product }) => (
       <Row key={product.id_product} className="container container-p">
         <Col lg={12}>
-          <img alt="image" src={product.img_link} className="products" />
+          <img alt="products" src={product.img_link} className="products-image" />
         </Col>
         <Col lg={12}>
           <h3 className="product-title">{product.name_product}</h3>
