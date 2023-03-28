@@ -1,0 +1,107 @@
+
+table{
+    font-size: 13px;
+    border-spacing: 0px;
+    border:1px solid #E5E5E5;
+}
+
+th {
+    margin: 0px;
+    border-bottom:1px solid #E5E5E5;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.cart-head {
+    background-color: #fbfbfb;
+}
+
+.cart-image {
+    padding: 15px 10px;   
+    width: 15%;
+    text-align: center;  
+}
+
+.cart-image img{
+    width: 50%;
+}
+
+.cart-product{
+    padding: 15px 10px;  
+    width: 30%;   
+    text-align: left;
+}
+.cart-price{
+    padding: 15px 10px;      
+    width: 15%; 
+    text-align: left;
+}
+
+.cart-quantity{
+    padding: 15px 10px;    
+    width: 15%;  
+    text-align: left;
+}
+
+.cart-subtotal{
+    padding: 15px 10px;
+    width: 15%; 
+    text-align: left; 
+}
+
+.button-cart {
+    width: 90%;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.cart-message {
+    width: 100%;
+} 
+
+
+.total-price {
+    padding: 15px 10px;  
+    text-align: left;
+}
+
+.total-product {
+    padding: 15px 10px; 
+    text-align: left; 
+
+}
+
+.total{
+    padding: 15px 10px; 
+    border-bottom: 1px solid #E5E5E5 
+}
+
+
+.checkout-message {
+    padding: 15px 10px; 
+    text-align: center;
+
+}
+
+.checkout-form {
+    display: block;
+
+}
+
+input.input-checkout{
+    border: 1px solid #E5E5E5;
+    width: 96%;
+}
+
+input.input-checkout-v2{
+    border: 1px solid #E5E5E5;
+    width: 98%;
+}
+
+textarea {
+    border: 1px solid #E5E5E5;
+    width: 98%;
+    height: 100px;
+}

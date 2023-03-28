@@ -1,17 +1,22 @@
 // Style
 import "./style.css";
+
+// Components
 import CarouselHome from "./Carousel"
 import Categorias from "./Categorias"
 import Banner from "./Banner";
 import Partners from "./Partners";
-import CardProducts from "../../layoutsContent/CardProducts";
+import Cards from "../../layoutsContent/Cards";
+
+
 
 // App
 const HomeContent = () => {
+
   return (
     <div>
       <CarouselHome />
-      <CardProducts />
+      <Cards/>
       <Banner />
       <Categorias />
       <Partners />

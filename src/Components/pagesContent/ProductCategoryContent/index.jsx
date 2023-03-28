@@ -1,47 +1,54 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { Row, Col, Card, Button } from "antd";
+import { Row, Col, Card} from "antd";
 import { Link } from "react-router-dom";
 
-import MockupContext from "../../../Context/MockupContext";
+import GeneralContext from "../../../Context/GeneralContext";
+//
 
 const ProductCategoryContent = () => {
+  const { products } = useContext(GeneralContext);
+  const params = useParams();
 
-  const {products} = useContext(MockupContext);
-  const {category} = useParams();
-  console.log(category)
+  const productFilter = (products) => {
+    const filteredData = products.results.filter((element) => element.product.category === params.category);
+    return filteredData;
+  };
 
+  console.log(params.category)
 
-//    const filterCategory = arrayOfCategory.filter((products)=>{
-//     return products === category.products
-//     }) 
+  const mapingData = (deployFilteredData) =>
+    deployFilteredData.map(({ product }) => (
+      <Col key={product.id_product} xs={12} lg={6}>
+        <Link to={`/product/${product.id_product}`}>
+          <Card hoverable cover={<img alt="images" src={product.img_link} />}>
+            <h3>{product.name_product}</h3>
+            <p>{product.category}</p>
+            <h1 className="red-color price">{product.price}</h1>
+          </Card>
+        </Link>
+      </Col>
+    ));
 
+    if (!products || !products.results.length) {
+      return (
+              <div className="container container-p text-center">
+                <h4>No hay productos en esta categoría</h4>
+              </div>
+              );
+      }
+  
+    const filteredProducts = productFilter(products);
+  
+    if (!filteredProducts.length) {
+      return (
+        <div className="container container-p text-center">
+          <h4>No hay productos en esta categoría</h4>
+        </div>
+        );
+      }
 
-  return (
-    <div>
-         <div className="container container-p text-center">
-
-            <Row gutter={16}>
-            <h2 style={{width: '100%', textTransform:"uppercase"}}>{category}</h2>
-            <div className="line"></div>
-              {products.map((product) => {
-                return (
-                  <Col key={product.name} xs={12} lg={6}>
-                    <Card hoverable cover={<img alt={product.alt} src={product.img} />} key={product.id}>
-                      <h3>{product.name}</h3>
-                      <h2>{product.category}</h2>
-                      <h4 className="red-color price">{product.price}</h4>
-                      <Link to={`/product/${product.id}`}>
-                        <Button className="black-red-button">Seleccionar opciones</Button>
-                      </Link>
-                    </Card>
-                  </Col>
-                );
-              })}
-            </Row>
-          </div>
-    </div>
-  );
+  return <div className="container container-p text-center"><Row gutter={16}>{products && mapingData(productFilter(products))}</Row></div>;
 };
 
 export default ProductCategoryContent;

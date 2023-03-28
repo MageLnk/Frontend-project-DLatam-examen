@@ -1,13 +1,13 @@
 // Providers
-import MockupContext from "./MockupContext/Provider";
+import GeneralContext from "./GeneralContext/Provider";
 // Main App
 import App from "../App";
 // App
 const AppProvider = () => {
   return (
-    <MockupContext>
+    <GeneralContext>
       <App />
-    </MockupContext>
+    </GeneralContext>
   );
 };
 

@@ -1,20 +1,15 @@
+//Global
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 // Pages
-import { Home, Error404 } from "./Pages/";
-import Cart from "./Pages/Cart";
-import ProductCategory from "./Pages/ProductCategory";
-import Product from "./Pages/Product";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Checkout from "./Pages/Checkout";
-import Dashboard from "./Pages/Dashboard";
+import { Home, Error404, ProductCategory, Product, Cart, Checkout, Login, Register, Dashboard } from "./Pages/";
+
 // Layouts
 import { Header, Footer } from "./Layouts/"; 
+
 // Style
 import "./style.css";
 import { PrivateRoute } from "./PrivateRouter";
-
-
 
 // App
 const App = () => {
