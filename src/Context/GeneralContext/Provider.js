@@ -8,6 +8,8 @@ const GeneralContextProvider = ({ children }) => {
   const [products, setProducts] = useState("");
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [accessToken, setAccessToken] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
 
   const getAllData = async (userId) => {
@@ -16,8 +18,6 @@ const GeneralContextProvider = ({ children }) => {
         url: `https://project-castle-production.up.railway.app/products/temporal`,
       });
 
-      //console.log(data)
-
       if (data) setProducts(data);
     } catch (e) {
       alert("Un error ha ocurrido. Por favor actualice la página");
@@ -25,8 +25,32 @@ const GeneralContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+
     getAllData();
+
+    const storedAccessToken = localStorage.getItem('accessToken');
+
+    if (storedAccessToken) {
+      setAccessToken(storedAccessToken);
+      setIsAuthenticated(true);
+    };
+
+
   }, []);
+
+
+  const handleLogin = (token) => {
+    setAccessToken(token);
+    localStorage.setItem("accessToken", token);
+    setIsAuthenticated(true);
+  };
+
+
+  const handleLogout = () => {
+    setAccessToken(null);
+    localStorage.removeItem('accessToken');
+    setIsAuthenticated(false);
+  };
 
   return (
     <GeneralContext.Provider
@@ -36,8 +60,11 @@ const GeneralContextProvider = ({ children }) => {
         cart,
         setCart,
         quantity,
-        setQuantity
-
+        setQuantity,
+        accessToken,
+        handleLogin,
+        handleLogout,
+        isAuthenticated
       }}
     >
       {children}

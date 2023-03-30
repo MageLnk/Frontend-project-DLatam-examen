@@ -1,4 +1,7 @@
+// Components 
 import { Row, Col } from "antd";
+
+// Assets 
 import logo from "../../../../assets/images/Logo_Canni.webp";
 
 const Banner = () => {

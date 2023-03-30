@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 const CartTotal = () => {
 
-  const { cart } = useContext(GeneralContext);
+    const { cart } = useContext(GeneralContext);
 
-  const totalPrice = cart.reduce((acc, product) => acc + (product.quantity * product.price), 0);
+    const totalPrice = cart.reduce((acc, product) => acc + (product.quantity * product.price), 0);
 
     return (
         <div>
             <Row>
                 <Col lg={12}></Col>
 
-                <Col lg={12} className="totalPrice container-p"> 
+                <Col lg={12} className="totalPrice container-p">
                     <table className="cart-table">
                         <thead className="cart-head">
                             <tr>
@@ -23,7 +23,7 @@ const CartTotal = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td  className="text-center container-p">
+                                <td className="text-center container-p">
                                     <Row>
                                         <Col lg={12}><h3>Total a pagar:</h3></Col>
                                         <Col lg={12}><h3 className="red-color">${totalPrice}</h3></Col>

@@ -1,19 +1,20 @@
 // Components
-
 import { Row, Col, List, Typography } from "antd";
-import { CaretRightOutlined, FacebookFilled, InstagramFilled } from "@ant-design/icons";
+import { CaretRightOutlined, FacebookFilled } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+
+// Assets
 import logoBlanco from "../../../assets/images/Logo_Canni_blanco-768x195.png";
 import webpay from "../../../assets/images/logo-web-pay.png";
 
 // Style
-
 import "./style.css";
 
 const productos = [
   "Esmalte",
   "Painting Gel",
   "Herramientas y Accesorios",
-  "Nails Extension",
+  "Nail Extension",
   "Aceite y suavizante",
   "Efectos y colecciones",
 ];
@@ -62,7 +63,8 @@ const FooterContent = () => {
             )}
           />
           <h4>Redes Sociales</h4>
-          <FacebookFilled /> <InstagramFilled />
+          <Link to="https://web.facebook.com/people/CANNI-CHILE-arte-a-tus-manos/100064102412683/?mibextid=ZbWKwL" target='_blank'><FacebookFilled/></Link>
+
         </Col>
         <Col sm={24} md={12} lg={6} className="column">
           <h4>Métodos de pago</h4>

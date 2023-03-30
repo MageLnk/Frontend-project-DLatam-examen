@@ -1,9 +1,11 @@
 // Components
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Row, Col, Menu } from "antd";
 import logo from "../../../../assets/images/Logo_Canni.webp";
 import { UserOutlined, ShoppingCartOutlined, MenuOutlined, UsergroupAddOutlined } from "@ant-design/icons";
+import GeneralContext from "../../../../Context/GeneralContext";
+import { useContext } from "react";
 
 // Style
 
@@ -11,11 +13,11 @@ import "../../HeaderContent/style.css";
 
 const Navbar = () => {
   const Navigate = useNavigate();
-  const { state } = useLocation();
+  const { isAuthenticated } = useContext(GeneralContext); // Obtener isAuthenticated desde el contexto
 
   return (
     <>
-      {state?.logged ? (
+      {isAuthenticated ? ( // Usar isAuthenticated para cambiar el contenido del menú si el usuario ha iniciado sesión
         <div className="menu">
           <Row className="container">
             <Col span={12}>
@@ -56,7 +58,9 @@ const Navbar = () => {
             </Col>
           </Row>
         </div>
+
       ) : (
+
         <div className="menu">
           <Row className="container">
             <Col span={12}>
@@ -102,4 +106,5 @@ const Navbar = () => {
     </>
   );
 };
+
 export default Navbar;

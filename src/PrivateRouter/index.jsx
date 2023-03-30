@@ -1,9 +1,11 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-export const PrivateRoute = ({children}) => {
+export const PrivateRoute = ({ children }) => {
+  const accessToken = localStorage.getItem("accessToken");
 
-    const { state } = useLocation();
-
-    return state?.logged ? children : <Navigate to='/login' />;
-    
+  if (accessToken) {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
 };

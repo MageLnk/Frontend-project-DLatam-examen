@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 // Components
 
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card, Button } from "antd";
 import { Link } from "react-router-dom";
 
 
@@ -14,12 +14,13 @@ const ItemCards = () => {
 
   const mapingData = (products) =>
     products.results.map(({ product }) => (
-      <Col key={product.id_product} xs={12} lg={6}>
+      <Col key={product.id_product} xs={12} lg={6} className="card-p">
         <Link to={`/product/${product.id_product}`}>
           <Card hoverable cover={<img alt="images" src={product.img_link} />}>
             <h3>{product.name_product}</h3>
             <p>{product.category}</p>
-            <h1 className="red-color price">{product.price}</h1>
+            <h1 className="red-color price">${product.price}</h1>
+            <Button className="black-red-button">Ver más</Button>
           </Card>
         </Link>
       </Col>

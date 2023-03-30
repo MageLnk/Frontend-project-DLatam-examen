@@ -1,27 +1,45 @@
+//Components
+
 import { Button } from "antd";
-import { useNavigate,  useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+// Context
+
+import { useContext } from "react";
+import GeneralContext from "../../../Context/GeneralContext";
+
+// Assets
+
+import Welcome from "../../../assets/images/welcome.png"
+
+// Style 
+
+import './style.css'
 
 const DashboardContent = () => {
+  const { handleLogout } = useContext(GeneralContext);
 
-const { state } = useLocation();   
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
-const onLogout = () => {
-    navigate('/login', {replace:true,
-    });
+  const handleLogoutAndRedirect = () => {
+    handleLogout();
+    navigate('/');
+  }
+
+  return (
+    <div className="container container-p text-center">
+          <img src={Welcome} alt="" className="t-image"/>
+          <h1>Hola, has iniciado sesión en Canni.cl</h1>
+          <Button onClick={handleLogoutAndRedirect} className="black-red-button">
+            Cerrar sesión
+          </Button>
+    </div>
+  );
 };
 
-    return ( 
-
-    <div className="container container-p text-center">
-        <h1>Hola, {state?.name}</h1>
-
-        <Button onClick={onLogout} className="black-red-button">Cerrar sesión</Button>
-    </div>
-
-  )
-
-}
-
 export default DashboardContent;
+
+
+
+

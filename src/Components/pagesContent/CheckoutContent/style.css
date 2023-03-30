@@ -1,0 +1,30 @@
+.checkout-message {
+    padding: 15px 10px; 
+    text-align: center;
+}
+
+.checkout-form {
+    display: block;
+}
+
+input.input-checkout{
+    border: 1px solid #E5E5E5;
+    width: 96%;
+}
+
+input.input-checkout-v2{
+    border: 1px solid #E5E5E5;
+    width: 98%;
+}
+
+textarea {
+    border: 1px solid #E5E5E5;
+    width: 98%;
+    height: 100px;
+}
+
+
+@media (max-width: 720px) {
+
+
+}
