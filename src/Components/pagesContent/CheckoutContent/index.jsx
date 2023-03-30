@@ -7,6 +7,7 @@ import { useContext } from "react";
 
 import {Row, Col, Button} from 'antd';
 import { Link } from "react-router-dom";
+import "./style.css"
 
 
 const CheckoutContent = () => {
@@ -21,7 +22,7 @@ const CheckoutContent = () => {
                     <div className="line"></div> 
                 </div>           
                     <Row>
-                        <Col lg={14}>
+                        <Col xs={24} sm={24} lg={14}>
                             <div> 
                                 <form className="checkout-form padding-rigth">
                                     <h2>Detalles de facturación</h2>
@@ -85,7 +86,7 @@ const CheckoutContent = () => {
                             </div>   
                         </Col>
 
-                        <Col lg={10}>
+                        <Col xs={24} sm={24} lg={10}>
                             <table className="cart-table">
                                     <thead className="cart-head">
                                         <tr>
@@ -96,17 +97,19 @@ const CheckoutContent = () => {
 
 
                                     {cart.map((product, index) => (
-                                    <tbody key={product.id}>
+                                    <tbody key={product.id_product} >
                                         <tr>
                                             <td className="total">{product.name_product}</td>
                                             <td className="total">{product.quantity * product.price}</td>
                                         </tr>   
                                     </tbody>         
                                     ))}
+                                    <thead>
                                     <tr>
                                             <td className="total"><h3>Total:</h3></td>
                                             <td className="total red-color"><h3>{totalPrice}</h3></td>
                                         </tr>  
+                                        </thead>
                             </table> 
 
                             <div className="checkout-message">  

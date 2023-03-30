@@ -4,27 +4,24 @@
 /* ------- General -------- */
 
 * {
-  font-family: 'Montserrat', sans-serif!important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
-
 a:where(.css-dev-only-do-not-override-10ed4xt).ant-typography {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 p {
-  font-size:12px;
+  font-size: 12px;
 }
 
 h4 {
   font-weight: 500;
 }
 
-
 img {
-  width:100%;
+  width: 100%;
 }
-
 
 .container {
   max-width: 1080px;
@@ -48,22 +45,17 @@ img {
   padding-right: 25px;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-
-.column {
-  padding: 20px;
-}
-
 .ant-list-items {
-  font-size:12px;
+  font-size: 12px;
 }
 
 .ant-btn {
   border-radius: 5px;
-  border:none;
+  border: none;
   font-weight: 600;
 }
 
@@ -83,178 +75,144 @@ img {
   margin: 20px auto 0 auto;
 }
 
-
-
 /* Color letras */
 
 .red-color {
-  color:#DB0600;
-} 
+  color: #DB0600;
+}
 
 .black-color {
-  color:#000000;
+  color: #000000;
 }
 
 .green-color {
-  color:#247f62;
-} 
+  color: #247f62;
+}
 
 .rose-color {
-  color:#c997a8;
+  color: #c997a8;
 }
 
 .grey-color {
-  color:#3F3F3F;
+  color: #3F3F3F;
 }
 
 .white-color {
-  color:#ffffff;
+  color: #ffffff;
 }
-
 
 /* Color fondo */
 
 .background-red {
-  background-color:#DB0600;
+  background-color: #DB0600;
 }
 
 .background-black {
-  background-color:#000000;
+  background-color: #000000;
 }
 
 .background-grey {
-  background-color:#3F3F3F;
+  background-color: #3F3F3F;
 }
-
 
 /* Botones */
 
 .rose-button {
-  background:#c997a8; 
-  color:#ffffff;
+  background: #c997a8;
+  color: #ffffff;
   position: absolute;
   margin: 5px 0px 0px 10px;
 }
 
 .rose-button:hover {
-  background:#ffffff; 
-  color: #c997a8!important;
+  background: #ffffff;
+  color: #c997a8 !important;
 }
 
 .green-button {
-  background:#247f62; 
-  color:#ffffff;
+  background: #247f62;
+  color: #ffffff;
   position: absolute;
   margin: 5px 0px 0px 10px;
 }
 
-.green-button:hover  {
-  background:#ffffff; 
-  color:#247f62!important;
+.green-button:hover {
+  background: #ffffff;
+  color: #247f62 !important;
 }
 
 
-.black-button  {
-  background:#000000; 
-  color:#ffffff!important;
+.black-button {
+  background: #000000;
+  color: #ffffff !important;
 }
 
-.black-button:hover  {
-  background:#ffffff; 
-  color:#000000!important;
+.black-button:hover {
+  background: #ffffff;
+  color: #000000 !important;
 }
 
-.red-button  {
-  background:#DB0600; 
-  color:#ffffff!important;
+.red-button {
+  background: #DB0600;
+  color: #ffffff !important;
 }
 
-.red-button:hover  {
-  background:#ffffff; 
-  color:#DB0600!important;
+.red-button:hover {
+  background: #ffffff;
+  color: #DB0600 !important;
 }
 
-.black-red-button  {
-  background:#000000; 
-  color:#ffffff!important;
+.black-red-button {
+  background: #000000;
+  color: #ffffff !important;
 }
 
-.black-red-button:hover  {
-  background:#DB0600; 
-  color:#ffffff!important;
+.black-red-button:hover {
+  background: #DB0600;
+  color: #ffffff !important;
 }
 
-/* ------- Forms -------- */
-
-form {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-input {
-  height: 40px;
-  border:#eeeeeeb7;
-  border-radius: 5px;
-
-}
-
-label {
-  padding: 0px 0px 15px 0px;
-}
-
-
-.input-group {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin: 10px 0;
-	text-align: center;
-}
-
-.box-form {
-
-  background: #eeeeee;
-  padding: 20px;
-  border-radius: 20px;
-
-  margin: 2%;
-
-}
 
 
 /* ------- Responsive -------- */
 
-@media (max-width: 720px) { 
+@media (max-width: 720px) {
 
-.rose-bottom {
-  position: relative;
+  .esmaltes-banner {
+    padding-left: 0px;
+    margin: auto;
+  }
+
+  .home-page-container {
+    margin-top: 120px;
+  }
+
+  .container {
+
+    padding: 20px;
+  }
+
+
+  .padding-rigth {
+    padding-right: 0px;
+  }
+
+  [class^="ant-row"] [class^="ant-row"] {
+
+    display: block;
+
+  }
+
+  .rose-button {
+
+    position: relative;
+
+  }
+
+  .green-button {
+
+    position: relative;
+
+  }
+
 }
-    
-.green-bottom {
-  position: relative;
-}
-
-.esmaltes-banner {
-  padding-left: 0px;
-  margin: auto;
-}
-
-.home-page-container {
-  margin-top:120px;
-}
-
-.container {
-
-padding: 20px;
-}
-
-
-[class^="ant-row"] [class^="ant-row"] {
-
-display: block;
-
-}
-
-}
-

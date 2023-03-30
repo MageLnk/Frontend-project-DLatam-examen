@@ -9,7 +9,7 @@ const GeneralContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
   const [accessToken, setAccessToken] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Agregar variable de estado
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
 
   const getAllData = async (userId) => {
@@ -23,32 +23,33 @@ const GeneralContextProvider = ({ children }) => {
       alert("Un error ha ocurrido. Por favor actualice la página");
     }
   };
-  
+
   useEffect(() => {
-    
+
     getAllData();
 
     const storedAccessToken = localStorage.getItem('accessToken');
 
     if (storedAccessToken) {
       setAccessToken(storedAccessToken);
-      setIsAuthenticated(true); // Establecer isAuthenticated en true si existe accessToken
+      setIsAuthenticated(true);
     };
+
 
   }, []);
 
 
   const handleLogin = (token) => {
     setAccessToken(token);
-    localStorage.setItem('accessToken', token);
-    setIsAuthenticated(true); // Establecer isAuthenticated en true después de iniciar sesión
+    localStorage.setItem("accessToken", token);
+    setIsAuthenticated(true);
   };
 
- 
+
   const handleLogout = () => {
     setAccessToken(null);
     localStorage.removeItem('accessToken');
-    setIsAuthenticated(false); // Establecer isAuthenticated en false después de cerrar sesión
+    setIsAuthenticated(false);
   };
 
   return (
@@ -59,8 +60,8 @@ const GeneralContextProvider = ({ children }) => {
         cart,
         setCart,
         quantity,
-        setQuantity, 
-        accessToken, 
+        setQuantity,
+        accessToken,
         handleLogin,
         handleLogout,
         isAuthenticated
