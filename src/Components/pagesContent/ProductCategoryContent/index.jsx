@@ -4,19 +4,20 @@ import { Row, Col, Card} from "antd";
 import { Link } from "react-router-dom";
 
 import GeneralContext from "../../../Context/GeneralContext";
-//
 
 const ProductCategoryContent = () => {
   const { products } = useContext(GeneralContext);
   const params = useParams();
 
   const productFilter = (products) => {
-    const filteredData = products.results.filter((element) => element.product.category === params.category);
+    const filteredData = products.results.filter((element) => element.product.category.replace(/\s+/g, '-') === params.category);
+
+  console.log(filteredData)
+
     return filteredData;
   };
 
-  console.log(params.category)
-
+  
   const mapingData = (deployFilteredData) =>
     deployFilteredData.map(({ product }) => (
       <Col key={product.id_product} xs={12} lg={6}>

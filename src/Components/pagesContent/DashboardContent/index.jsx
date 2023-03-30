@@ -1,27 +1,27 @@
+import { useContext } from "react";
 import { Button } from "antd";
-import { useNavigate,  useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import GeneralContext from "../../../Context/GeneralContext";
 
 const DashboardContent = () => {
 
-const { state } = useLocation();   
+const { handleLogout } = useContext(GeneralContext);
 const navigate = useNavigate();
+ 
 
+const handleLogoutAndRedirect = () => {
+    handleLogout();
+    navigate('/');
+  }
 
-const onLogout = () => {
-    navigate('/login', {replace:true,
-    });
-};
-
-    return ( 
-
+  return (
     <div className="container container-p text-center">
-        <h1>Hola, {state?.name}</h1>
-
-        <Button onClick={onLogout} className="black-red-button">Cerrar sesión</Button>
+      <h1>Hola, </h1>
+      <Button onClick={handleLogoutAndRedirect} className="black-red-button">
+        Cerrar sesión
+      </Button>
     </div>
-
-  )
-
-}
+  );
+};
 
 export default DashboardContent;
