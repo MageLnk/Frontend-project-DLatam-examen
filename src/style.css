@@ -8,7 +8,7 @@
 }
 
 a:where(.css-dev-only-do-not-override-10ed4xt).ant-typography {
-  color: #ffffff;
+  color: #ffffff!important;
 }
 
 p {
