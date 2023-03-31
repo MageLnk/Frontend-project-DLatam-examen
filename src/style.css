@@ -7,6 +7,18 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
+:where(.css-dev-only-do-not-override-10ed4xt).ant-list .ant-list-item {
+ padding: 2px!important; 
+}
+
+:where(.css-10ed4xt).ant-list .ant-list-item {
+  padding: 2px!important; 
+}
+
+a:where(.css-10ed4xt).ant-typography {
+  color: #ffffff!important;
+}
+
 a:where(.css-dev-only-do-not-override-10ed4xt).ant-typography {
   color: #ffffff!important;
 }
