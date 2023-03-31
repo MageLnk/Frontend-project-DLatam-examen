@@ -2,10 +2,6 @@
   padding: 20px;
 }
 
-:where(.css-dev-only-do-not-override-10ed4xt).ant-list .ant-list-item {
-  color: #ffffff;
-  padding: 2px!important;
-}
 
 .anticon-facebook {
   font-size: 30px;
